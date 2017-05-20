@@ -13,7 +13,7 @@ app.get('/', (_, res) => {
 });
 
 app.get('/:input', (req, res) => {
-  const parsedDate = new Date(req.params.input);
+  const parsedDate = isNaN(parseInt(req.params.input)) ? new Date(req.params.input) : new Date(parseInt(req.params.input));
 
   if (isNaN(parsedDate.getTime())) {
     res.status(400).end("Sorry, it seems like the string you queried couldn't be parsed. Check API docs for examples.");
