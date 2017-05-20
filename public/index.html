@@ -11,16 +11,20 @@
 
 <div class="container">
     <h3>A simple timestamp microservice</h3>
-    <p>A freeCodeCamp project by Ilya Murashov</p>
+    <em>A freeCodeCamp project by Ilya Murashov</em>
     <p>This service allows simple conversion between UNIX and human readable time formats.</p>
 
     <h4>Usage example</h4>
-    <code>https://[path_to_the_service]/December 15, 2015</code>
-    <p>or</p>
-    <code>https://[path_to_the_service]/1450137600</code>
+    <p>
+        <code>https://[service_address]/December 15, 2015</code>
+        <br>
+        or
+        <br>
+        <code>https://[service_address]/1450134000000</code>
+    </p>
 
     <h4>Response example</h4>
-    <p>In both query scenarios you should the the output in the following format</p>
+    <p>In both query scenarios you should the the output in the following format:</p>
     <pre><code>{
     "unix": 1450134000000,
     "natural": "Tue Dec 15 2015"
