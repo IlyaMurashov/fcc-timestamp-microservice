@@ -4,6 +4,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+app.set('port', (process.env.PORT || 5000));
+
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (_, res) => {
@@ -24,6 +26,6 @@ app.get('/:input', (req, res) => {
   }
 });
 
-app.listen(8080, _ => {
-  console.log('Listening on port 8080');
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
